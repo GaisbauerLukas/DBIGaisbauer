@@ -1,0 +1,68 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/lukas/Documents/School/DBI/First Project/First Project.csproj": {}
+  },
+  "projects": {
+    "/home/lukas/Documents/School/DBI/First Project/First Project.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/lukas/Documents/School/DBI/First Project/First Project.csproj",
+        "projectName": "First Project",
+        "projectPath": "/home/lukas/Documents/School/DBI/First Project/First Project.csproj",
+        "packagesPath": "/home/lukas/.nuget/packages/",
+        "outputPath": "/home/lukas/Documents/School/DBI/First Project/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/lukas/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "EFCore.NamingConventions": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
