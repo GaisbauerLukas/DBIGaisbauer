@@ -31,6 +31,13 @@ public class Demo {
         address.setStreetNo(20);
         address.setStreet("Straße");
 
+        Order order = new Order();
+        order.setSsn(newPerson);
+        order.setAdressNo(address);
+        order.setOrderDate(Date.from(LocalDate.of(1970,6,5).atStartOfDay(ZoneId.systemDefault()).toInstant()));
+        short a = 20;
+        order.setOrderState(a);
+
         Product productA = new Product();
         productA.setDescription("A cool Product");
         productA.setPrice(44.55);
@@ -38,6 +45,8 @@ public class Demo {
         Product productB = new Product();
         productB.setDescription("A not even useful Product");
         productB.setPrice(0.01);
+
+
 
 
         //insertPerson(em, newPerson);
