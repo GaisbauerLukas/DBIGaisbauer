@@ -66,4 +66,19 @@ public class Demo {
         em.persist(address);
         em.getTransaction().commit();
     }
+    private static void insertProduct(EntityManager em, Product product){
+        em.getTransaction().begin();
+        em.persist(product);
+        em.getTransaction().commit();
+    }
+    private static void insertOrder(EntityManager em, Order order){
+        em.getTransaction().begin();
+        em.persist(order);
+        em.getTransaction().commit();
+    }
+    private static void insertOrderItems(EntityManager em, OrderItem orderItem){
+        em.getTransaction().begin();
+        em.persist(orderItem);
+        em.getTransaction().commit();
+    }
 }
