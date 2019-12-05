@@ -1,5 +1,7 @@
 package Demo;
 
+import org.hibernate.exception.DataException;
+
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -11,7 +13,7 @@ public class Address {
     private AddressNo addressNo;
     @ManyToOne
     @JoinColumn(name="ssn",insertable = false, updatable = false)
-    private demo.Person person;
+    private Person person;
     private String country;
     private String street;
     private Integer streetNo;
