@@ -58,6 +58,11 @@ public class Demo {
 
         //insertPerson(em, newPerson);
         //insertAddress(em,address);
+        insertOrder(em,order);
+        insertProduct(em, productA);
+        insertProduct(em, productB);
+        insertOrderItems(em, itemA);
+        insertOrderItems(em, itemB);
         /*
         Query query = em.createQuery("select distinct p from Person p join p.addresses a");
         List<Person> result = query.getResultList();
