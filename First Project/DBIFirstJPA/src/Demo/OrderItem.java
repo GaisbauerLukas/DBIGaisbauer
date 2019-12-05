@@ -2,44 +2,42 @@ package Demo;
 
 import com.sun.istack.NotNull;
 
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
+@Entity
 public class OrderItem {
     @Id
     @ManyToOne
     @JoinColumn(name="orderID",insertable = false, updatable = false)
-    private int orderID;
+    private Order orderID;
     @Id
     @OneToOne
     @JoinColumn(name="productId",insertable = false, updatable = false)
-    private int productId;
+    private Product productId;
     @NotNull
-    private int amount;
+    private Integer amount;
 
-    public int getOrderID() {
+    public Order getOrderID() {
         return orderID;
     }
 
-    public void setOrderID(int orderID) {
+    public void setOrderID(Order orderID) {
         this.orderID = orderID;
     }
 
-    public int getProductId() {
+    public Product getProductId() {
         return productId;
     }
 
-    public void setProductId(int productId) {
+    public void setProductId(Product productId) {
         this.productId = productId;
     }
 
-    public int getAmount() {
+    public Integer getAmount() {
         return amount;
     }
 
-    public void setAmount(int amount) {
+    public void setAmount(Integer amount) {
         this.amount = amount;
     }
 }

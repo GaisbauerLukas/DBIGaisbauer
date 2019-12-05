@@ -33,7 +33,7 @@ public class Demo {
 
         //insertPerson(em, newPerson);
         //insertAddress(em,address);
-
+        /*
         Query query = em.createQuery("select distinct p from Person p join p.addresses a");
         List<Person> result = query.getResultList();
         for (Person p : result){
@@ -47,11 +47,13 @@ public class Demo {
         System.out.println("Cities with awesome people: ");
         res1.forEach(c -> System.out.println(c));
 
-        Query q2 = em.createQuery("SELECT NEW demo.AwsomePeopleCount(p.isAwesome, count(p.ssn)) from Person p group by p.isAwesome");
+        Query q2 = em.createQuery("SELECT NEW Demo.AwsomePeopleCount(p.isAwesome, count(p.ssn)) from Person p group by p.isAwesome");
         List<AwsomePeople> res2 = q2.getResultList();
         System.out.printf("There are %d awesome people and %d people who are not awesome.", res2.stream().filter(a-> a.isAwesome()).findFirst().map(a -> a.getCount()).orElse((long) 0),res2.stream().filter(a-> !a.isAwesome()).findFirst().map(a -> a.getCount()).orElse((long) 0));
         em.close();
         factory.close();
+
+         */
     }
 
     private static void insertPerson(EntityManager em, Person person){
