@@ -10,7 +10,6 @@ import java.util.Date;
 public class Product {
     @Id
     @GeneratedValue
-    @Column(name = "ProductID", updatable = false, nullable = false)
     private Integer ProductID;
     private String description;
     private Number price;
