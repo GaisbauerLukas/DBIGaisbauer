@@ -31,6 +31,15 @@ public class Demo {
         address.setStreetNo(20);
         address.setStreet("Straße");
 
+        Product productA = new Product();
+        productA.setDescription("A cool Product");
+        productA.setPrice(44.55);
+
+        Product productB = new Product();
+        productB.setDescription("A not even useful Product");
+        productB.setPrice(0.01);
+
+
         //insertPerson(em, newPerson);
         //insertAddress(em,address);
         /*

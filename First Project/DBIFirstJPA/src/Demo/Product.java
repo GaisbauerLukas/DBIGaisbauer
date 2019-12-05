@@ -17,10 +17,6 @@ public class Product {
         return ProductID;
     }
 
-    public void setProductID(Integer productID) {
-        ProductID = productID;
-    }
-
     public String getDescription() {
         return description;
     }
