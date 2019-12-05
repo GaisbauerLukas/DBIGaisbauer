@@ -46,8 +46,15 @@ public class Demo {
         productB.setDescription("A not even useful Product");
         productB.setPrice(0.01);
 
+        OrderItem itemA = new OrderItem();
+        itemA.setOrderID(order);
+        itemA.setProductId(productA);
+        itemA.setAmount(3);
 
-
+        OrderItem itemB = new OrderItem();
+        itemB.setOrderID(order);
+        itemB.setProductId(productB);
+        itemB.setAmount(2);
 
         //insertPerson(em, newPerson);
         //insertAddress(em,address);
