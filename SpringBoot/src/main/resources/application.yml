@@ -3,4 +3,4 @@ app:
     jdbc-url: jdbc:postgresql://localhost:5432/postgres?currentSchema=first_steps
     username: postgres
     password: passwort
-    pool-size: 30
+    pool-size: 30C
