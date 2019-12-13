@@ -7,6 +7,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCallback;
 import org.springframework.stereotype.Repository;
 
+import java.math.BigDecimal;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -49,7 +50,8 @@ public class PersonDaoImpl implements PersonDao {
                 rs.getString("last_name"),
                 rs.getBoolean("is_awesome"),
                 rs.getFloat("awesomeness"),
-                rs.getBigDecimal("wealth")
+                //rs.getBigDecimal("wealth")
+                new BigDecimal(12)
         ));
     }
 
