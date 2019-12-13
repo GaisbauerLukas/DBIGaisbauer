@@ -13,7 +13,6 @@ import java.util.List;
 public class PersonService {
 
     private final PersonDao personDao;
-    private List<Person> personList = new LinkedList<>();
 
     @Autowired
     public PersonService(@Qualifier("personDao") PersonDao personDao) {
@@ -21,10 +20,11 @@ public class PersonService {
     }
 
     public int  addPerson(Person person){
-        personList.add(person);
         return personDao.insertPerson(person);
     }
-    public List<Person> getAllPeople() {
-        return personList;
+
+
+    public List<Person> getPersons(){
+        return personDao.getAllPeople();
     }
 }

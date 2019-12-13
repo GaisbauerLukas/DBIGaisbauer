@@ -16,5 +16,8 @@ public class PersonDaoImpl implements PersonDao {
         _persons.add(person);
         return 0;
     }
+    public List<Person> getAllPeople() {
+        return _persons;
+    }
 
 }
