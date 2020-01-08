@@ -1,12 +1,13 @@
 package com.example.demo.api;
 
-import com.example.demo.dao.PersonDao;
-import com.example.demo.dao.PersonDaoImpl;
-import com.example.demo.model.Person;
+import com.example.demo.dto.PersonDTO;
 import com.example.demo.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import org.springframework.transaction.annotation.Transactional;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @RequestMapping("api/v1/person")
@@ -21,12 +22,14 @@ public class PersonController {
     }
 
     @PostMapping
-    public void addPerson(@RequestBody Person person){
+    @Transactional
+    public void addPerson(@Valid @NotNull @RequestBody PersonDTO person){
         personService.addPerson(person);
     }
 
     @GetMapping
-    public List<Person> getAllPeople(){
-        return personService.getPersons();
+    @Transactional(readOnly=true)
+    public List<PersonDTO> getAllPeople(){
+        return personService.getAllPeople();
     }
 }
