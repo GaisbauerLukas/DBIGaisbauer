@@ -23,7 +23,7 @@ public class PersonRepositoryImpl extends RepositoryBase<Person> implements Pers
 
     @Override
     public List<PersonBO> getAllPeople() {
-        var query = entityManager.createQuery("select p from Person p");
+        var query = entityManager.createQuery("select p from Person p",Person.class);
         List<Person> entities = query.getResultList();
         return entities.stream().map(PersonBO::new).collect(Collectors.toList());
     }

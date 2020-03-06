@@ -1,6 +1,6 @@
 app:
   datasource:
-    jdbc-url: jdbc:postgresql://localhost:5432/postgres?currentSchema=public
+    jdbc-url: jdbc:postgresql://localhost:5432/postgres?currentSchema=private
     username: postgres
     password: passwort
     pool-size: 30
