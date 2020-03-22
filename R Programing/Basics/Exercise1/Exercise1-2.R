@@ -61,9 +61,9 @@ print(func.sumNotThree(3,6,9))
 #8
 func.isPrime <- function(a) {
   if (a == 2) {
-    return (TRUE)
+    (TRUE)
   } else if (any(a %% 2:(a-1) == 0)) {
-    return (FALSE)
+    (FALSE)
   } else { 
     (TRUE)
   }
