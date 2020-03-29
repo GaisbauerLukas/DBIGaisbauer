@@ -5,6 +5,7 @@ func.lotto <- function(a,b,c,d,e,f){
   four <- 0
   five <- 0
   jackpot <- 0
+  zusatz <- 0
   
   for (i in 1:40) {
     #Generriert Zufallszahl
@@ -21,7 +22,7 @@ func.lotto <- function(a,b,c,d,e,f){
     
     #Abfrage ob Zusatzzahl in Losung
     if(zusatzzahl %in% losung){
-      zusatzzahl <- zusatzzahl + 1
+      zusatzzahl <- zusatz + 1
       richtig <- richtig +1
     }
     
@@ -46,7 +47,7 @@ func.lotto <- function(a,b,c,d,e,f){
       jackpot <- jackpot + 1
     }
   }
-  result <- c(paste0("Zusatzzahl: ", zusatzzahl, "x"), paste0("3 correct: ", three, "x"), paste0("4 correct: ", four, "x"), paste0("5 correct: ", five, "x"), paste0("jackpot: ", jackpot, "x"))
+  result <- c(paste0("Zusatzzahl: ", zusatz, "x"), paste0("3 correct: ", three, "x"), paste0("4 correct: ", four, "x"), paste0("5 correct: ", five, "x"), paste0("jackpot: ", jackpot, "x"))
   result <- matrix(result, nrow = 5, ncol = 1)
   return(result)
 }
